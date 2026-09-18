@@ -1,0 +1,1257 @@
+
+/* =========================================
+   GTA MINI — ULUG'BEK.R
+   STYLE.CSS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #22ff66;
+    --green-dark: #0c9b3d;
+    --black: #050807;
+    --dark: #0b120e;
+    --panel: rgba(7, 14, 10, 0.96);
+    --red: #ff3030;
+    --yellow: #ffd83d;
+    --white: #ffffff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #173b22 0%,
+            #07110a 55%,
+            #020403 100%
+        );
+
+    color: var(--white);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   MAIN SCREEN
+========================================= */
+
+.screen {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.82)
+        ),
+
+        radial-gradient(
+            circle at center,
+            #164a28,
+            #020403 75%
+        );
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   MENU BOX
+========================================= */
+
+.menu-box {
+    width: min(440px, 92vw);
+
+    padding: 38px 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10, 23, 14, 0.98),
+            rgba(3, 8, 5, 0.98)
+        );
+
+    border: 2px solid
+        rgba(34, 255, 102, 0.7);
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 70px
+        rgba(0, 0, 0, 0.8),
+
+        0 0 35px
+        rgba(34, 255, 102, 0.12);
+}
+
+
+/* =========================================
+   GAME LOGO
+========================================= */
+
+.game-logo {
+    font-size: 45px;
+
+    font-weight: 1000;
+
+    letter-spacing: 2px;
+
+    color: var(--green);
+
+    text-shadow:
+        0 0 10px
+        rgba(34, 255, 102, 0.8),
+
+        0 0 30px
+        rgba(34, 255, 102, 0.25);
+
+    margin-bottom: 8px;
+}
+
+
+.developer-logo {
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    color: #b9ffc9;
+
+    margin-bottom: 25px;
+}
+
+
+.welcome {
+    color: #b8c9bd;
+
+    margin-bottom: 25px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   NAME INPUT
+========================================= */
+
+.name-section {
+    text-align: left;
+
+    margin-bottom: 22px;
+}
+
+.name-section label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d8ffe2;
+
+    font-weight: bold;
+}
+
+.name-section input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    color: white;
+
+    background: #07100a;
+
+    border: 1px solid
+        rgba(34, 255, 102, 0.35);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.name-section input:focus {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 15px
+        rgba(34, 255, 102, 0.18);
+}
+
+.name-section input::placeholder {
+    color: #637368;
+}
+
+
+/* =========================================
+   MENU BUTTONS
+========================================= */
+
+.menu-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.main-button {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 18px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d963d,
+            #20df5a
+        );
+
+    color: white;
+
+    font-weight: 900;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s,
+        filter 0.15s;
+}
+
+.main-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.15);
+
+    box-shadow:
+        0 8px 25px
+        rgba(34, 255, 102, 0.2);
+}
+
+.main-button:active {
+    transform: scale(0.97);
+}
+
+
+.continue-button {
+    background:
+        linear-gradient(
+            135deg,
+            #245fdb,
+            #3785ff
+        );
+}
+
+
+.danger-button {
+    background:
+        linear-gradient(
+            135deg,
+            #8f1c1c,
+            #ed3636
+        );
+}
+
+
+.menu-info {
+    margin-top: 25px;
+
+    line-height: 1.8;
+
+    color: #81988a;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   GAME SCREEN
+========================================= */
+
+.game-screen {
+    position: fixed;
+
+    inset: 0;
+
+    background: #111;
+
+    display: none;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HUD
+========================================= */
+
+.hud {
+    height: 70px;
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 0 18px;
+
+    background:
+        linear-gradient(
+            rgba(3, 8, 5, 0.96),
+            rgba(3, 8, 5, 0.82)
+        );
+
+    border-bottom:
+        1px solid
+        rgba(34, 255, 102, 0.35);
+
+    z-index: 100;
+}
+
+
+/* HUD LEFT */
+
+.hud-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.player-info,
+.money {
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+.player-info span {
+    color: var(--green);
+
+    font-weight: bold;
+}
+
+
+.money {
+    color: var(--yellow);
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   MISSION HUD
+========================================= */
+
+.mission-info {
+    flex: 1;
+
+    max-width: 420px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    color: #dcebe0;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+.mission-info span {
+    color: var(--yellow);
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   HUD RIGHT
+========================================= */
+
+.hud-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.hud-button {
+    padding: 10px 13px;
+
+    border-radius: 9px;
+
+    color: white;
+
+    background:
+        #15251a;
+
+    border:
+        1px solid
+        rgba(34, 255, 102, 0.25);
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.hud-button:hover {
+    background: #1b3824;
+
+    border-color:
+        var(--green);
+
+    transform: translateY(-1px);
+}
+
+
+.pause-button {
+    background:
+        linear-gradient(
+            135deg,
+            #9d7515,
+            #d49e19
+        );
+
+    border-color:
+        rgba(255, 216, 61, 0.5);
+}
+
+
+/* =========================================
+   GAME CONTAINER
+========================================= */
+
+.game-container {
+    position: absolute;
+
+    top: 70px;
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #071009;
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+#gameCanvas {
+    width: 1200px;
+
+    height: 700px;
+
+    max-width: 96vw;
+
+    max-height: 82vh;
+
+    background: #237c38;
+
+    border:
+        4px solid
+        rgba(255, 255, 255, 0.9);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.7),
+
+        0 0 25px
+        rgba(34, 255, 102, 0.08);
+}
+
+
+/* =========================================
+   NOTIFICATION
+========================================= */
+
+.notification {
+    position: absolute;
+
+    left: 50%;
+
+    top: 25px;
+
+    transform:
+        translateX(-50%);
+
+    min-width: 220px;
+
+    padding: 11px 18px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(0, 0, 0, 0.82);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s;
+}
+
+
+/* =========================================
+   CONTROLS
+========================================= */
+
+.controls {
+    position: absolute;
+
+    left: 25px;
+
+    bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 12px;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    border-radius: 10px;
+
+    color: #c9d7cd;
+
+    font-size: 11px;
+
+    pointer-events: none;
+}
+
+.controls span {
+    color: white;
+
+    background: #17251b;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    padding: 5px 7px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+.controls small {
+    color: #8fa194;
+
+    margin-right: 5px;
+}
+
+
+/* =========================================
+   PAUSE OVERLAY
+========================================= */
+
+.overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0, 0, 0, 0.78);
+
+    backdrop-filter:
+        blur(5px);
+
+    z-index: 500;
+}
+
+
+.pause-box {
+    width: min(390px, 90vw);
+
+    padding: 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c1b10,
+            #030604
+        );
+
+    border:
+        2px solid
+        rgba(34, 255, 102, 0.5);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.8);
+}
+
+
+.pause-title {
+    font-size: 45px;
+
+    font-weight: 900;
+
+    color: var(--green);
+
+    margin-bottom: 12px;
+}
+
+
+.pause-box p {
+    color: #aebeb3;
+
+    margin-bottom: 25px;
+}
+
+
+.pause-box .main-button {
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   SHOP PANEL
+========================================= */
+
+.side-panel {
+    position: absolute;
+
+    right: 20px;
+
+    top: 85px;
+
+    width: 340px;
+
+    max-height:
+        calc(100vh - 110px);
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    background:
+        rgba(5, 12, 8, 0.98);
+
+    border:
+        2px solid
+        rgba(34, 255, 102, 0.55);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.8);
+
+    display: none;
+
+    z-index: 400;
+}
+
+
+/* SHOP SCROLL */
+
+.side-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.side-panel::-webkit-scrollbar-thumb {
+    background: var(--green);
+
+    border-radius: 10px;
+}
+
+
+/* PANEL HEADER */
+
+.panel-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+
+.panel-header h2 {
+    color: var(--green);
+
+    font-size: 24px;
+}
+
+
+.close-button {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background:
+        #551919;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.close-button:hover {
+    background: #d52c2c;
+
+    transform: rotate(5deg);
+}
+
+
+/* SHOP MONEY */
+
+.shop-money {
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    background:
+        rgba(255, 216, 61, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 216, 61, 0.2);
+
+    border-radius: 9px;
+
+    color: var(--yellow);
+}
+
+
+/* SHOP ITEM */
+
+.shop-item {
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    display: grid;
+
+    grid-template-columns:
+        50px 1fr;
+
+    gap: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101d14,
+            #09110c
+        );
+
+    border:
+        1px solid
+        rgba(34, 255, 102, 0.16);
+
+    border-radius: 12px;
+}
+
+
+.item-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    border-radius: 10px;
+
+    font-size: 27px;
+}
+
+
+.item-info h3 {
+    margin-bottom: 4px;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+.item-info p {
+    margin-bottom: 7px;
+
+    color: #83958a;
+
+    font-size: 11px;
+}
+
+
+.item-info strong {
+    color: var(--yellow);
+
+    font-size: 13px;
+}
+
+
+.buy-button {
+    grid-column: 1 / -1;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #126f34,
+            #19ae4c
+        );
+
+    font-weight: bold;
+
+    font-size: 11px;
+
+    transition: 0.2s;
+}
+
+
+.buy-button:hover {
+    filter: brightness(1.2);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MISSION PANEL
+========================================= */
+
+.mission-panel {
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: min(400px, 90vw);
+
+    padding: 25px;
+
+    background:
+        rgba(5, 12, 8, 0.97);
+
+    border:
+        2px solid
+        rgba(255, 216, 61, 0.55);
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.8);
+
+    display: none;
+
+    z-index: 350;
+}
+
+
+.mission-panel h2 {
+    color: var(--yellow);
+
+    margin-bottom: 18px;
+}
+
+
+.mission-panel h3 {
+    margin-bottom: 10px;
+
+    color: white;
+}
+
+
+.mission-panel p {
+    color: #9aaba0;
+
+    margin-bottom: 10px;
+
+    line-height: 1.5;
+}
+
+
+.mission-panel .reward {
+    color: var(--yellow);
+
+    font-weight: bold;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   SAVE MESSAGE
+========================================= */
+
+.save-message {
+    position: fixed;
+
+    left: 50%;
+    bottom: 35px;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+
+    padding: 12px 20px;
+
+    background:
+        rgba(5, 20, 10, 0.95);
+
+    border:
+        1px solid
+        var(--green);
+
+    border-radius: 10px;
+
+    color: var(--green);
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 800;
+
+    transition:
+        opacity 0.25s,
+        transform 0.25s;
+}
+
+
+.save-message.show {
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* =========================================
+   PRODUCER
+========================================= */
+
+.producer {
+    position: fixed;
+
+    bottom: 5px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: #849589;
+
+    font-size: 11px;
+
+    z-index: 900;
+
+    white-space: nowrap;
+}
+
+
+.producer strong {
+    color: var(--green);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hud {
+        height: 60px;
+
+        padding: 0 8px;
+
+        gap: 5px;
+    }
+
+    .hud-left {
+        gap: 5px;
+    }
+
+    .player-info,
+    .money {
+        padding: 7px 8px;
+
+        font-size: 11px;
+    }
+
+    .mission-info {
+        display: none;
+    }
+
+    .hud-button {
+        padding: 8px;
+
+        font-size: 0;
+    }
+
+    .hud-button::first-letter {
+        font-size: 16px;
+    }
+
+    .game-container {
+        top: 60px;
+    }
+
+    #gameCanvas {
+        max-width: 98vw;
+
+        max-height: 80vh;
+
+        border-width: 3px;
+    }
+
+    .side-panel {
+        top: 70px;
+
+        right: 10px;
+
+        width: min(340px, 92vw);
+
+        max-height:
+            calc(100vh - 85px);
+    }
+
+    .controls {
+        left: 10px;
+
+        bottom: 15px;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .game-logo {
+        font-size: 34px;
+    }
+
+    .menu-box {
+        padding: 28px 20px;
+    }
+
+    .developer-logo {
+        font-size: 12px;
+
+        letter-spacing: 4px;
+    }
+
+    .hud-right {
+        gap: 3px;
+    }
+
+    .hud-button {
+        min-width: 35px;
+
+        padding: 8px 7px;
+    }
+
+    .player-info {
+        max-width: 110px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+    .controls {
+        transform:
+            scale(0.85);
+
+        transform-origin:
+            left bottom;
+    }
+
+    .producer {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes greenPulse {
+
+    0% {
+        box-shadow:
+            0 0 5px
+            rgba(34, 255, 102, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px
+            rgba(34, 255, 102, 0.35);
+    }
+
+    100% {
+        box-shadow:
+            0 0 5px
+            rgba(34, 255, 102, 0.15);
+    }
+
+}
+
+
+.game-logo {
+    animation:
+        greenPulse 3s infinite;
+}
+
+

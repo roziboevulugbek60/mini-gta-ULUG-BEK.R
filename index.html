@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="GTA MINI - ULUG'BEK.R"
+    >
+
+    <title>GTA MINI — ULUG'BEK.R</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         MAIN MENU
+    ================================== -->
+
+    <div id="mainMenu" class="screen">
+
+        <div class="menu-box">
+
+            <div class="game-logo">
+                🚗 GTA MINI
+            </div>
+
+            <div class="developer-logo">
+                ULUG'BEK.R
+            </div>
+
+            <p class="welcome">
+                Kichik shaharga xush kelibsiz!
+            </p>
+
+
+            <!-- PLAYER NAME -->
+
+            <div class="name-section">
+
+                <label for="playerName">
+                    👤 O'yinchi ismingiz
+                </label>
+
+                <input
+                    id="playerName"
+                    type="text"
+                    maxlength="18"
+                    placeholder="Ismingizni yozing..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- MENU BUTTONS -->
+
+            <div class="menu-buttons">
+
+                <button
+                    id="newGameBtn"
+                    class="main-button"
+                >
+                    ▶️ YANGI O'YIN
+                </button>
+
+
+                <button
+                    id="continueBtn"
+                    class="main-button continue-button"
+                >
+                    📂 DAVOM ETISH
+                </button>
+
+
+                <button
+                    id="loadBtn"
+                    class="main-button"
+                >
+                    💾 SAQLANGAN O'YIN
+                </button>
+
+            </div>
+
+
+            <div class="menu-info">
+                🎮 WASD — Harakat
+                <br>
+                🚗 E — Mashinaga chiqish
+                <br>
+                ⏸️ P — Pause
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         GAME SCREEN
+    ================================== -->
+
+    <div
+        id="gameScreen"
+        class="game-screen"
+    >
+
+        <!-- TOP HUD -->
+
+        <header class="hud">
+
+            <div class="hud-left">
+
+                <div class="player-info">
+                    👤
+                    <span id="hudPlayerName">
+                        O'yinchi
+                    </span>
+                </div>
+
+                <div class="money">
+                    💰
+                    <span id="money">
+                        0
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="mission-info">
+
+                🎯 MISSIYA:
+                <span id="missionText">
+                    Missiya yo'q
+                </span>
+
+            </div>
+
+
+            <div class="hud-right">
+
+                <button
+                    id="shopBtn"
+                    class="hud-button"
+                >
+                    🏪 SHOP
+                </button>
+
+
+                <button
+                    id="saveBtn"
+                    class="hud-button"
+                >
+                    💾 SAVE
+                </button>
+
+
+                <button
+                    id="pauseBtn"
+                    class="hud-button pause-button"
+                >
+                    ⏸️ PAUSE
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- GAME CANVAS -->
+
+        <main class="game-container">
+
+            <canvas
+                id="gameCanvas"
+                width="1200"
+                height="700"
+            ></canvas>
+
+
+            <!-- GAME NOTIFICATION -->
+
+            <div
+                id="notification"
+                class="notification"
+            >
+                Xush kelibsiz!
+            </div>
+
+
+            <!-- CONTROLS HELP -->
+
+            <div class="controls">
+
+                <span>WASD</span>
+                <small>Yurish</small>
+
+                <span>E</span>
+                <small>Mashina</small>
+
+                <span>F</span>
+                <small>Missiya</small>
+
+            </div>
+
+        </main>
+
+
+        <!-- =================================
+             PAUSE MENU
+        ================================== -->
+
+        <div
+            id="pauseMenu"
+            class="overlay"
+        >
+
+            <div class="pause-box">
+
+                <div class="pause-title">
+                    ⏸️ PAUSE
+                </div>
+
+                <p>
+                    O'yin vaqtincha to'xtatildi
+                </p>
+
+
+                <button
+                    id="resumeBtn"
+                    class="main-button"
+                >
+                    ▶️ DAVOM ETISH
+                </button>
+
+
+                <button
+                    id="pauseSaveBtn"
+                    class="main-button"
+                >
+                    💾 O'YINNI SAQLASH
+                </button>
+
+
+                <button
+                    id="menuBtn"
+                    class="main-button danger-button"
+                >
+                    🏠 BOSH MENYU
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             SHOP
+        ================================== -->
+
+        <div
+            id="shopPanel"
+            class="side-panel"
+        >
+
+            <div class="panel-header">
+
+                <h2>🏪 SHOP</h2>
+
+                <button
+                    id="closeShopBtn"
+                    class="close-button"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div class="shop-money">
+
+                💰 Balans:
+                <strong id="shopMoney">
+                    0
+                </strong>
+
+            </div>
+
+
+            <!-- CAR -->
+
+            <div class="shop-item">
+
+                <div class="item-icon">
+                    🚗
+                </div>
+
+                <div class="item-info">
+
+                    <h3>Sport Car</h3>
+
+                    <p>
+                        Tez va chiroyli mashina
+                    </p>
+
+                    <strong>
+                        💰 500
+                    </strong>
+
+                </div>
+
+                <button
+                    class="buy-button"
+                    data-item="sportCar"
+                    data-price="500"
+                >
+                    SOTIB OLISH
+                </button>
+
+            </div>
+
+
+            <!-- SKIN -->
+
+            <div class="shop-item">
+
+                <div class="item-icon">
+                    👕
+                </div>
+
+                <div class="item-info">
+
+                    <h3>Qora kiyim</h3>
+
+                    <p>
+                        Maxsus personaj kiyimi
+                    </p>
+
+                    <strong>
+                        💰 250
+                    </strong>
+
+                </div>
+
+                <button
+                    class="buy-button"
+                    data-item="blackClothes"
+                    data-price="250"
+                >
+                    SOTIB OLISH
+                </button>
+
+            </div>
+
+
+            <!-- FAST CAR -->
+
+            <div class="shop-item">
+
+                <div class="item-icon">
+                    🏎️
+                </div>
+
+                <div class="item-info">
+
+                    <h3>Super Car</h3>
+
+                    <p>
+                        Juda tez avtomobil
+                    </p>
+
+                    <strong>
+                        💰 1000
+                    </strong>
+
+                </div>
+
+                <button
+                    class="buy-button"
+                    data-item="superCar"
+                    data-price="1000"
+                >
+                    SOTIB OLISH
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             MISSION PANEL
+        ================================== -->
+
+        <div
+            id="missionPanel"
+            class="mission-panel"
+        >
+
+            <h2>🎯 MISSIYA</h2>
+
+            <div
+                id="missionContent"
+            >
+
+                <h3>
+                    Birinchi topshiriq
+                </h3>
+
+                <p>
+                    Shahardagi sariq belgiga boring.
+                </p>
+
+                <p class="reward">
+                    Mukofot: 💰 200
+                </p>
+
+                <button
+                    id="startMissionBtn"
+                    class="main-button"
+                >
+                    BOSHLASH
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             SAVE MESSAGE
+        ================================== -->
+
+        <div
+            id="saveMessage"
+            class="save-message"
+        >
+            💾 O'yin saqlandi!
+        </div>
+
+
+        <!-- =================================
+             PRODUCER
+        ================================== -->
+
+        <footer class="producer">
+
+            Ishlab chiqaruvchi:
+            <strong>ULUG'BEK.R</strong>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =================================
+         GAME OVER
+    ================================== -->
+
+    <div
+        id="gameOver"
+        class="screen hidden"
+    >
+
+        <div class="menu-box">
+
+            <div class="game-logo">
+                🏁 O'YIN TUGADI
+            </div>
+
+            <p>
+                Sarguzashtingiz yakunlandi.
+            </p>
+
+            <button
+                id="restartBtn"
+                class="main-button"
+            >
+                🔄 QAYTA O'YNASH
+            </button>
+
+            <button
+                id="gameOverMenuBtn"
+                class="main-button"
+            >
+                🏠 BOSH MENU
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
